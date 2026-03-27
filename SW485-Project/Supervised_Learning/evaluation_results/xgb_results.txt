@@ -1,0 +1,11 @@
+XGBoost Classification Report:
+5-Fold CV F1 Score: 0.793 ± 0.076
+------------------------------
+              precision    recall  f1-score   support
+
+           0       0.50      0.36      0.42        33
+           1       0.77      0.85      0.81        81
+
+    accuracy                           0.71       114
+   macro avg       0.63      0.61      0.61       114
+weighted avg       0.69      0.71      0.70       114

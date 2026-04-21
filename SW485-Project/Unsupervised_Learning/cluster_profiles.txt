@@ -1,11 +1,12 @@
-Clustering Profiles Summary:
+CLUSTERING PROFILES SUMMARY
+
 
 Dataset: Indian Liver Patient Records
 Methods: K-Means Clustering & Hierarchical Clustering
 
 
 
-K-MEANS CLUSTERING:
+1. K-MEANS CLUSTERING SUMMARY
 
 
 Cluster Interpretation:
@@ -32,7 +33,7 @@ K-Means produces compact and efficient clusters but struggles to fully separate 
 
 
 
-HIERARCHICAL CLUSTERING:
+2. HIERARCHICAL CLUSTERING SUMMARY
 
 
 Cluster Interpretation:
@@ -57,9 +58,7 @@ Key Findings:
 Conclusion:
 Hierarchical Clustering provides more interpretable, medically meaningful groupings but is sensitive to outliers and still shows overlap in patient profiles.
 
-
-
-OVERALL:
+3. OVERALL COMPARISON
 
 
 - K-Means:

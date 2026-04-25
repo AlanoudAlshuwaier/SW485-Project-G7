@@ -1,0 +1,2 @@
+Patient 2: (row 315), Prediction: No Liver Disease
+Hey, great news - your liver health screening results look good. The test shows that you don't have any signs of liver disease, which is a big relief. Your liver is working properly and everything seems to be in order. You can feel good about taking care of your body, and just keep up with your healthy habits. Overall, it's a positive result, so you can breathe easy.

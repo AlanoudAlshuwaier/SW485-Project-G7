@@ -1,0 +1,2 @@
+Patient 3: (row 440), Prediction: Liver Disease Detected
+Hey, I know this might be a bit concerning, but let's break it down. Your liver health screening results show that there might be some issues with your liver. This doesn't necessarily mean it's serious, but it does mean you should talk to your doctor about what's going on and what you can do to take care of your liver. Your doctor will likely want to do some more tests to figure out what's happening and come up with a plan to help you get your liver healthy again.

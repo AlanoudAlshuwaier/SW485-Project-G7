@@ -1,0 +1,67 @@
+Template Name: Simple Explanation
+Template ID: T1
+
+
+INTENDED USE CASE:
+Quick explanation of the prediction for patients with no medical 
+background. Used when the user wants to understand the result in 
+plain language without going into clinical details.
+
+
+DESIGN RATIONALE:
+Patients receiving a medical screening result often feel anxious 
+and confused by technical terms. A simple, friendly explanation 
+helps them grasp the basic meaning before deciding on next steps.
+We chose this approach to:
+- Reduce information overload
+- Avoid medical jargon that may confuse non-experts
+- Provide a calm, reassuring tone
+
+
+PROMPT STRUCTURE:
+System Message:
+You are a friendly health assistant. 
+Explain medical results in simple, everyday language. 
+Avoid technical terms. Keep responses short (3-5 sentences).
+Be reassuring but honest.
+
+User Prompt:
+A patient received their liver health screening result.
+
+Prediction: {prediction}
+Key values:
+{features}
+
+Explain this result in plain language, as if talking to a friend 
+with no medical background. Focus on the overall meaning, not the numbers.
+
+
+EXAMPLE INPUT:
+Prediction: Liver Disease Detected
+Features:
+- Age: 65
+- Gender: Female
+- Total_Bilirubin: 0.7
+- Direct_Bilirubin: 0.1
+- Alkaline_Phosphotase: 187
+- Alamine_Aminotransferase: 16
+- Aspartate_Aminotransferase: 18
+- Total_Protiens: 6.8
+- Albumin: 3.3
+- Albumin_and_Globulin_Ratio: 0.9
+- Dataset: 1
+EXAMPLE OUTPUT:
+Hey, I know getting test results can be nerve-wracking. Unfortunately, your liver health screening shows that there might be some issues with your liver. This doesn't necessarily mean it's serious, but it's something we should look into further. We'll likely need to do some more tests to understand what's going on and figure out the best way to take care of your liver.
+
+
+ASSUMPTIONS:
+- The user has no medical training.
+- The user wants quick understanding, not detailed analysis.
+- A reassuring tone is appropriate for the audience.
+- The features provided are sufficient for a basic explanation.
+
+LIMITATIONS:
+- May oversimplify complex medical conditions.
+- Not suitable for clinicians or medical students who need depth.
+- Lacks specific next-step recommendations.
+- Cannot replace professional medical consultation.

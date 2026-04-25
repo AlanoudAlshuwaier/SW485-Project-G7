@@ -1,0 +1,2 @@
+Patient 1: (row 0), Prediction: Liver Disease Detected
+Hey, I know getting test results can be nerve-wracking. Unfortunately, your liver health screening shows that there might be some issues with your liver. This doesn't necessarily mean it's serious, but it's something we should look into further. We'll likely need to do some more tests to understand what's going on and figure out the best way to take care of your liver.

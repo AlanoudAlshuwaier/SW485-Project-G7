@@ -1,0 +1,81 @@
+Template Name: Detailed Reasoning
+Template ID: T3
+
+INTENDED USE CASE:
+Provide a clear and structured medical explanation of patient lab results.
+ This template is used when users need to understand both the meaning of medical indicators and how they contribute to the final prediction.
+
+DESIGN RATIONALE:
+Users may need a deeper understanding of how the prediction was made. 
+Providing structured explanations of relevant medical features helps improve transparency and interpretability.
+
+We chose this approach to:
+- Explain the reasoning behind the prediction
+- Break down important medical indicators in a clear way
+- Support informed understanding of the results
+
+PROMPT STRUCTURE:
+System Message:
+You are a medical assistant with clinical knowledge.
+Provide structured and clear explanations.
+Explain relevant medical features based on the patient data.
+For important indicators, include:
+
+1. What it is (simple meaning)
+2. What it indicates
+3. Its relevance to liver health
+
+Keep explanations clear and easy to follow.
+Avoid unnecessary details.
+Focus only on features that significantly impact the prediction.
+
+User Prompt:
+A patient received their liver health screening result.
+
+Prediction: {prediction}
+Key values:
+{features}
+
+Analyze the results and:
+
+- Identify the most relevant features from the data
+- Explain each important feature in simple terms
+- Highlight abnormal or notable values
+- Link these values to the prediction
+- Provide a final summary explaining why the prediction was made
+
+EXAMPLE INPUT:
+Prediction: Liver Disease Detected
+Features:
+
+- Age: 65
+- Gender: Female
+- Total_Bilirubin: 0.7
+- Direct_Bilirubin: 0.1
+- Alkaline_Phosphotase: 187
+- ALT: 16
+- AST: 18
+- Total_Proteins: 6.8
+- Albumin: 3.3
+- Albumin_and_Globulin_Ratio: 0.9
+
+EXAMPLE OUTPUT:
+Alkaline phosphatase is an enzyme related to bile duct function, and elevated levels may indicate liver stress or bile flow issues. In this case, its higher value suggests a possible concern.
+
+Albumin is a protein produced by the liver, and lower levels may reflect reduced liver function. The value (3.3) indicates a slight decrease, which can be associated with liver conditions.
+
+Other values appear relatively within normal ranges and do not strongly indicate acute liver damage.
+
+Overall, the combination of these indicators helps explain why the model predicts a possible liver condition.
+
+ASSUMPTIONS:
+
+- Users need understandable explanations of medical indicators.
+- The model prediction is based on meaningful features.
+- Data contains relevant health-related variables.
+
+LIMITATIONS:
+
+- Not a medical diagnosis.
+- Does not include full clinical context (history, imaging, etc.).
+- Simplifies complex medical processes for clarity.

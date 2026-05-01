@@ -1,0 +1,96 @@
+Template Name: Step-by-Step Guide
+Template ID: T4
+ 
+ 
+INTENDED USE CASE:
+This template was designed for situations where the prediction alone is not enough. Instead of just showing the final result, it walks through each lab value individually to show whether it falls within the normal range or not. It works well for patients who want to understand what their results actually mean, and also for doctors who need a quick and clear review of what is driving the prediction.
+ 
+DESIGN RATIONALE:
+A system that only outputs "Liver Disease Detected" without any supporting explanation is difficult to trust, especially in a medical context. We felt that showing the reasoning behind the prediction, value by value, would make the output far more meaningful and transparent. This approach was chosen for several reasons:
+
+- It gives the user a clear view of which values are flagging as abnormal and which are not
+- It removes the "black box" feeling that often comes with machine learning predictions
+- It builds confidence in the result by letting the user follow the logic themselves
+- It serves a wider range of users, from those with no medical background to those with clinical experience
+ 
+PROMPT STRUCTURE:
+System Message:
+You are a medical reasoning assistant.
+When given lab values and a prediction, think step by step:
+1. Check each value against its normal range.
+2. Note which ones are too high, too low, or normal.
+3. Explain how the abnormal values connect to the prediction.
+4. End with a short conclusion that ties everything together.
+Keep your language clear and use the reference ranges as part of your reasoning.
+ 
+User Prompt:
+A machine learning model made the following prediction for a liver patient.
+ 
+Prediction: {prediction}
+Lab Values:
+{features}
+ 
+Go through each lab value step by step and explain whether it supports
+or goes against the prediction. End with a clear reasoning conclusion.
+ 
+ 
+EXAMPLE INPUT:
+Prediction: Liver Disease Detected
+Features:
+- Age: 65
+- Gender: Female
+- Total_Bilirubin: 0.7
+- Direct_Bilirubin: 0.1
+- Alkaline_Phosphotase: 187
+- Alamine_Aminotransferase: 16
+- Aspartate_Aminotransferase: 18
+- Total_Protiens: 6.8
+- Albumin: 3.3
+- Albumin_and_Globulin_Ratio: 0.9
+ 
+EXAMPLE OUTPUT:
+Step-by-step reasoning:
+ 
+1. Total Bilirubin (0.7) - normal range is 0.2 to 1.2. This is fine,
+   no issue here.
+ 
+2. Direct Bilirubin (0.1) - normal is below 0.3. Also normal.
+ 
+3. Alkaline Phosphotase (187) -  normal is 44 to 147. This one is high.
+   It could mean the liver or the bile ducts are under some stress.
+ 
+4. ALT (16) and AST (18) - both are within normal limits. No sign of
+   sudden liver damage.
+ 
+5. Total Proteins (6.8) - normal range is 6.0 to 8.3. Fine.
+ 
+6. Albumin (3.3) - normal is 3.5 to 5.0. This is a bit low. The liver
+   is responsible for making albumin, so when it is low it usually
+   means the liver is not functioning as well as it should.
+ 
+7. Albumin/Globulin Ratio (0.9) - should be above 1.0. It is slightly
+   below that. Together with the low albumin this is a pattern often
+   seen in chronic liver conditions.
+ 
+Conclusion:
+Most of the values look fine on their own, but the low albumin and the
+low A/G ratio together suggest the liver has been struggling for a while
+rather than having sudden damage. 
+
+This supports the prediction of Liver
+Disease Detected, even though the enzyme levels are normal.
+ 
+ 
+ASSUMPTIONS:
+- The reference ranges used are general standard values.
+- The prediction from the model is being checked not just accepted.
+- The person reading the output may or may not have a medical background.
+- This template is only meant to explain the result not to diagnose.
+ 
+LIMITATIONS:
+- Reference ranges can be slightly different depending on the lab or country.
+- The model might sometimes give a wrong reference range, so the output
+  should always be reviewed by a professional.
+- The response is longer than other templates so it takes more time to read.
+- It does not take into account the patient's medical history or medications.
+- It should never be used as a final medical decision on its own.

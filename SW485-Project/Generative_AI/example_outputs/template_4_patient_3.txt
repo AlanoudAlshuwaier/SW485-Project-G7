@@ -1,0 +1,37 @@
+Patient 3: (row 440), Prediction: Liver Disease Detected
+
+Step-by-step reasoning:
+
+1. Total Bilirubin (0.8 mg/dL) — Normal: 0.2–1.2 mg/dL. Within range.
+   No biliary obstruction or hemolytic signal.
+
+2. Direct Bilirubin (0.2 mg/dL) — Normal: <0.3 mg/dL. Normal.
+
+3. Alkaline Phosphotase (198 U/L) — Normal: 44–147 U/L. ELEVATED.
+   Exceeds the normal upper limit by ~35%. In a 49-year-old female, this could
+   reflect perimenopausal bone turnover or hepatic/biliary involvement. Further
+   workup (GGT, imaging) is needed to differentiate.
+
+4. ALT (23 U/L) — Normal: 7–56 U/L. Normal. No acute injury pattern.
+
+5. AST (20 U/L) — Normal: 10–40 U/L. Normal.
+
+6. Total Proteins (7.0 g/dL) — Normal: 6.0–8.3 g/dL. Normal.
+
+7. Albumin (4.3 g/dL) — Normal: 3.5–5.0 g/dL. Normal.
+   Hepatic synthetic function appears preserved. This is a counter-indicator
+   against severe or established liver disease.
+
+8. Albumin/Globulin Ratio (1.5) — Normal: >1.0. Normal.
+   No chronic inflammatory or disease pattern from this marker.
+
+Reasoning Conclusion:
+This is an ambiguous case. The albumin, A/G ratio, and transaminases are all
+normal - individually, they would argue against liver disease. However, the
+elevated ALP (198 U/L) combined with the overall feature vector places this
+patient in a pattern that the Random Forest model associates with liver disease.
+The ML classifier may be detecting a subtle composite risk pattern not captured
+by any single threshold. The prediction of Liver Disease Detected is partially
+supported (elevated ALP) but not strongly confirmed by the other markers alone.
+This case should be treated as a borderline positive requiring clinical follow-up
+rather than a confident diagnosis.

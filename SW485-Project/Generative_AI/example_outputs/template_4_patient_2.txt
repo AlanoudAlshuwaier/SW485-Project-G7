@@ -1,0 +1,33 @@
+Patient 2: (row 315), Prediction: No Liver Disease
+
+Step-by-step reasoning:
+
+1. Total Bilirubin (0.9 mg/dL) — Normal: 0.2–1.2 mg/dL. Within range.
+   Clearance function intact.
+
+2. Direct Bilirubin (0.3 mg/dL) — Normal: <0.3 mg/dL. Borderline.
+   At the upper edge of normal; not clinically significant in isolation for a
+   22-year-old male, but worth noting.
+
+3. Alkaline Phosphotase (179 U/L) — Normal: 44–147 U/L. MILDLY ELEVATED.
+   In a young male (22), ALP can be physiologically elevated due to bone growth
+   and remodeling; this reading is not necessarily hepatic in origin.
+
+4. ALT (18 U/L) — Normal: 7–56 U/L. Normal. No hepatocellular injury.
+
+5. AST (21 U/L) — Normal: 10–40 U/L. Normal. AST:ALT = 1.2; non-specific.
+
+6. Total Proteins (6.7 g/dL) — Normal: 6.0–8.3 g/dL. Normal.
+
+7. Albumin (3.7 g/dL) — Normal: 3.5–5.0 g/dL. Normal.
+   Adequate hepatic synthetic function confirmed.
+
+8. Albumin/Globulin Ratio (1.2) — Normal: >1.0. Normal.
+   No inflammatory or chronic liver disease pattern.
+
+Reasoning Conclusion:
+All synthetic markers (albumin, A/G ratio, total proteins) are within normal
+ranges, and transaminases show no hepatocellular injury. The mildly elevated ALP
+is most plausibly physiological in a 22-year-old male and does not override the
+otherwise normal panel. The ML prediction of No Liver Disease is well-supported;
+the model correctly weighs the synthetic and enzymatic evidence in this case.

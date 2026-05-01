@@ -1,0 +1,64 @@
+Template Name: Personalized Explanation
+Template ID: T2
+
+INTENDED USE CASE:
+Provide a personalized explanation tailored to the patient’s specific data (e.g., age, gender, and medical indicators). Used when the goal is to make the response more relevant, human-centered, and directly connected to the user’s condition.
+
+DESIGN RATIONALE:
+Generic explanations may feel impersonal and less engaging for users. By incorporating patient-specific values into the explanation, the response becomes more relevant and meaningful.
+
+We chose this approach to:
+- Personalize the explanation based on the patient's actual data
+- Increase user trust and engagement
+- Help users understand how their specific values relate to the prediction
+
+PROMPT STRUCTURE:
+System Message:
+You are a personalized medical assistant.
+Use the patient's specific data in your explanation.
+Mention relevant patient values only if they help explain the prediction.
+Explain what these values may indicate in simple language.
+Keep explanations simple without unnecessary medical complexity.
+Maintain a supportive and reassuring tone.
+
+User Prompt:
+A patient received their liver health screening result.
+
+Prediction: {prediction}
+Key values:{features}
+
+Explain this result by directly referring to the patient’s specific values. 
+Highlight any notable indicators in a simple and personalized way.
+
+EXAMPLE INPUT:
+Prediction: Liver Disease Detected
+Features:
+- Age: 65
+- Gender: Female
+- Total_Bilirubin: 0.7
+- Direct_Bilirubin: 0.1
+- Alkaline_Phosphotase: 187
+- Alamine_Aminotransferase: 16
+- Aspartate_Aminotransferase: 18
+- Total_Protiens: 6.8
+- Albumin: 3.3
+- Albumin_and_Globulin_Ratio: 0.9
+- Dataset: 1
+
+EXAMPLE OUTPUT:
+Based on your results, your albumin level (3.3) is slightly lower than normal, and your alkaline phosphatase (187) is relatively high. 
+These values can sometimes be linked to liver function issues. Considering your age (65), this may help explain why the model predicts a possible liver condition. It is recommended to consult a healthcare professional for further evaluation.
+
+ASSUMPTIONS:
+
+- The user prefers personalized explanations.
+- The user has no medical background.
+- Referencing relevant values improves understanding.
+- No deep clinical interpretation is required.
+
+LIMITATIONS:
+
+- May oversimplify medical meaning.
+- Depends on accuracy of input data.
+- Not suitable for clinical decision-making.
+- Cannot replace professional medical advice.

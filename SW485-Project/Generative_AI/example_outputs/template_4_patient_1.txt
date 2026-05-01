@@ -1,0 +1,40 @@
+Patient 1: (row 0), Prediction: Liver Disease Detected
+
+Step-by-step reasoning:
+
+1. Total Bilirubin (0.7 mg/dL) — Normal range: 0.2–1.2 mg/dL. Within range.
+   No evidence of impaired bilirubin clearance or hemolytic process.
+
+2. Direct Bilirubin (0.1 mg/dL) — Normal: <0.3 mg/dL. Normal.
+   No pattern of obstructive jaundice or intrahepatic cholestasis.
+
+3. Alkaline Phosphotase (187 U/L) — Normal: 44–147 U/L. ELEVATED.
+   Exceeds the upper limit by ~27%. This can indicate biliary obstruction, hepatic
+   inflammation, or — in older females — bone remodeling. Warrants context.
+
+4. ALT / Alamine Aminotransferase (16 U/L) — Normal: 7–56 U/L. Normal.
+   No acute hepatocellular injury signal.
+
+5. AST / Aspartate Aminotransferase (18 U/L) — Normal: 10–40 U/L. Normal.
+   AST:ALT ratio ~1.1; not indicative of alcoholic hepatitis pattern (>2).
+
+6. Total Proteins (6.8 g/dL) — Normal: 6.0–8.3 g/dL. Within range.
+
+7. Albumin (3.3 g/dL) — Normal: 3.5–5.0 g/dL. LOW.
+   Below reference. Albumin is synthesized exclusively by the liver; a value below
+   3.5 is a sensitive marker of impaired hepatic synthetic function. This is a
+   meaningful finding supporting the disease prediction.
+
+8. Albumin/Globulin Ratio (0.9) — Normal: >1.0. LOW.
+   Below threshold. Alongside reduced albumin, a low A/G ratio is associated with
+   chronic liver disease, nephrotic syndrome, or inflammatory states. In this
+   profile, the liver etiology is most consistent.
+
+Reasoning Conclusion:
+The transaminases and bilirubin are normal, which rules out acute hepatocellular
+injury. However, the reduced albumin (3.3) and A/G ratio (0.9) together indicate
+diminished synthetic capacity of the liver, the hallmark of chronic rather than
+acute liver disease. The elevated ALP adds a secondary signal of possible biliary
+or hepatic stress. The ML prediction of Liver Disease Detected is well-supported
+by the synthetic marker pattern (albumin + A/G ratio), even in the absence of
+elevated enzymes or bilirubin.

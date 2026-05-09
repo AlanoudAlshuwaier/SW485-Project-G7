@@ -1,3 +1,15 @@
+
+## Team Student Name:
+
+- Riyam Alhajress - 444200780
+- Ghada Altuwijri - 444201104
+- Tala Albulwi - 444200684
+- Alanoud Alshuwaier - 444200792
+- Jana Albahkali - 444201216
+- Jumanah Alanazy - 444200443
+- Munirah Alshathri - 444200669
+
+
 ## Team Task Distribution Matrix
 
 | Student Name | Phase 1: Data & Supervised Learning | Phase 2: Unsupervised & Generative AI |
